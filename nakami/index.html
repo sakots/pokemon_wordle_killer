@@ -13,12 +13,12 @@
         <h1>Pokemon Wordle Killer ダイパまで・5文字</h1>
     </header>
     <main>
-        <h2>文字を入力すると、その文字が含まれるポケモンが消えます。</h2>
+        <h2>文字を入力すると、その文字が含まれるポケモンが消えます。（一度に１文字まで）</h2>
         <p>ポケモン、搾れるね！</p>
         <form name="pokemon_killer">
             <fieldset>
                 <legend>アルセウス</legend>
-                <input type="text" name="char" maxlength="1" placeholder="1文字まで！">
+                <input type="text" name="char" maxlength="1">
                 <input type="button" value="搾る" onclick="kill()">
             </fieldset>
         </form>
