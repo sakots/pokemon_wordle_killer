@@ -1,7 +1,23 @@
 body {
-    background-color: #EEE;
+    background: linear-gradient(#BAA, #A88);
+    background-attachment: fixed;
+    padding: 1em 2em;
 }
 
 ul {
-    column-count: 5;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    color: #211;
+    li {
+        width: 7em;
+        display: block;
+        border: #686 solid 1px;
+        background: #BDB;
+        margin: 0 0 -1px;
+        padding: 0.1em;
+        &::before {
+            content: "・";
+        }
+    }
 }

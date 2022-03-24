@@ -1,9 +1,25 @@
+@charset "UTF-8";
 body {
-  background-color: #EEE;
+  background: linear-gradient(#BAA, #A88);
+  background-attachment: fixed;
+  padding: 1em 2em;
 }
 
 ul {
-  -moz-column-count: 5;
-       column-count: 5;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  color: #211;
+}
+ul li {
+  width: 7em;
+  display: block;
+  border: #686 solid 1px;
+  background: #BDB;
+  margin: 0 0 -1px;
+  padding: 0.1em;
+}
+ul li::before {
+  content: "・";
 }
 /*# sourceMappingURL=style.css.map */
