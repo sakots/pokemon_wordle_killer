@@ -15,12 +15,11 @@
     <main>
         <h2>文字列を入力すると、その文字が含まれるポケモンが消えます。<del>（一度に１文字まで）</del></h2>
         <p>ポケモン、搾れるね！</p>
-        <form name="pokemon">
+        <form name="pokemon" action="" method="post" onsubmit="javascropt: return false;">
             <fieldset>
                 <legend>アルセウス</legend>
                 <input type="text" name="char">
-                <input type="button" value="搾る" onclick="kill()">
-                Enterでリセット
+                <button type="submit" onclick="kill()">搾る</button>
             </fieldset>
         </form>
         <ul id="target_pokemon">
