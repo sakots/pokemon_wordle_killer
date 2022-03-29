@@ -8,7 +8,7 @@
 
 ここに設置しました。
 
-[Pokemon Wordle Killer (io)](https://sakots.github.io/pokemon_wordle_killer/)
+[Pokemon Wordle Killer (io)](https://sakots.github.io/pwk/)
 
 React使おうと思ってたけど、使わなくてもできてしまった。
 
