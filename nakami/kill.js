@@ -31,13 +31,20 @@ function highlight() {
   let highlight_class_split = highlight_class.split('');
   console.log (highlight_class_split);
 
-  // 入力した文字のクラスを持つ要素をハイライト
+  // 入力した文字のクラスを持つ要素をハイライト/戻す
   for (let i =0; i < highlight_class_split.length; i++) {
     let target_class = highlight_class_split[i];
     let target_char = document.getElementsByClassName(target_class);
     console.log (target_char);
     for (let j = 0; j < target_char.length; j++) {
-      target_char[j].style.backgroundColor = "yellow";
+      const currentBgColor = window.getComputedStyle(target_char[j]).backgroundColor;
+      if (currentBgColor === "rgb(255, 255, 0)") {
+        // すでにハイライトされている場合は戻す
+        target_char[j].style.backgroundColor = "";
+      } else {
+        // ハイライトされていない場合はハイライトする
+        target_char[j].style.backgroundColor = "yellow";
+      }
     }
   }
 }
