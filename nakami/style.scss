@@ -1,23 +1,23 @@
 body {
-    background: #CCC;
-    background-attachment: fixed;
-    padding: 1em 2em;
+  background: #CCC;
+  background-attachment: fixed;
+  padding: 1em 2em;
 }
 
 ul {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    color: #211;
-    li {
-        width: 7em;
-        display: block;
-        outline: #686 solid 1px;
-        background: #BDB;
-        gap: 2px;
-        padding: 0.1em;
-        &::before {
-            content: "・";
-        }
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  color: #211;
+  li {
+    width: 7em;
+    display: block;
+    outline: #686 solid 1px;
+    background: #BDB;
+    gap: 2px;
+    padding: 0.1em;
+    &::before {
+      content: "・";
     }
+  }
 }
