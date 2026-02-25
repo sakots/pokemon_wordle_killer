@@ -14,12 +14,15 @@
     </header>
     <main>
         <h2>文字列を入力すると、その文字が含まれるポケモンが消えます。</h2>
+        <h2>ハイライト機能もつけました。</h2>
         <p>ポケモン、搾れるね！</p>
         <form name="pokemon" action="" method="post" onsubmit="javascript: return false;">
             <fieldset>
                 <legend>アルセウス</legend>
                 <input type="text" name="char">
                 <button type="submit" onclick="kill()">搾る</button>
+                <input type="text" name="char2">
+                <button type="submit" onclick="highlight()">ハイライト</button>
             </fieldset>
         </form>
         <ul id="target_pokemon">

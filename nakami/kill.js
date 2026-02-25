@@ -12,3 +12,26 @@ function kill() {
     }
   }
 }
+function highlight() {
+  // まず、すべてのハイライトをリセット
+  //const all_items = document.getElementById('target_pokemon').getElementsByTagName('li');
+  //for (let k = 0; k < all_items.length; k++) {
+  //  all_items[k].style.backgroundColor = "";
+  //}
+
+  // 入力した文字を取得
+  const highlight_class = document.pokemon.char2.value;
+  console.log (highlight_class);
+  let highlight_class_split = highlight_class.split('');
+  console.log (highlight_class_split);
+
+  // 入力した文字のクラスを持つ要素をハイライト
+  for (let i =0; i < highlight_class_split.length; i++) {
+    let target_class = highlight_class_split[i];
+    let target_char = document.getElementsByClassName(target_class);
+    console.log (target_char);
+    for (let j = 0; j < target_char.length; j++) {
+      target_char[j].style.backgroundColor = "yellow";
+    }
+  }
+}
