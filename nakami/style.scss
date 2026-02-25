@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(#BAA, #A88);
+    background: #BAA;
     background-attachment: fixed;
     padding: 1em 2em;
 }
@@ -12,9 +12,9 @@ ul {
     li {
         width: 7em;
         display: block;
-        border: #686 solid 1px;
+        outline: #686 solid 1px;
         background: #BDB;
-        margin: 0 0 -1px;
+        gap: 2px;
         padding: 0.1em;
         &::before {
             content: "・";
