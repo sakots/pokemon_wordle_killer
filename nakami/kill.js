@@ -13,11 +13,6 @@ function kill() {
   }
 }
 function highlight() {
-  // まず、すべてのハイライトをリセット
-  //const all_items = document.getElementById('target_pokemon').getElementsByTagName('li');
-  //for (let k = 0; k < all_items.length; k++) {
-  //  all_items[k].style.backgroundColor = "";
-  //}
 
   // 入力した文字を取得
   const highlight_class = document.pokemon.char2.value;
