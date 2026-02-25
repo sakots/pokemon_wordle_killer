@@ -8,11 +8,15 @@
 
 ここに設置しました。
 
-[Pokemon Wordle Killer](https://sakots.red/pwk/)
+[Pokemon Wordle Killer](https://sakots.github.io/pwk/)
 
 React使おうと思ってたけど、使わなくてもできてしまった。
 
 ## 履歴
+
+### [2026/02/25]
+
+- 設置URL修正
 
 ### [2023/05/30]
 
