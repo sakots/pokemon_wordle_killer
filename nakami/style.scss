@@ -9,12 +9,12 @@ ul {
   flex-wrap: wrap;
   position: relative;
   color: #211;
+  gap: 1.5px;
   li {
     width: 7em;
     display: block;
-    outline: #686 solid 1px;
+    outline: 1px solid #898;
     background: #BDB;
-    gap: 2px;
     padding: 0.1em;
     &::before {
       content: "・";
