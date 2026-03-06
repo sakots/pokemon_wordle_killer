@@ -1,3 +1,4 @@
+// ポケモンを消す関数
 function kill() {
 
   // 入力した文字を取得
@@ -15,7 +16,24 @@ function kill() {
       target_char[j].style.visibility = "hidden";
     }
   }
+
+  // 入力をクリアしておく
+  document.pokemon_kill.char.value = "";
 }
+
+// 消去のリセット
+function kill_reset() {
+  const items = document.querySelectorAll('#target_pokemon li');
+  items.forEach(item => {
+    // visibility を元に戻す (空文字はデフォルト値)
+    item.style.visibility = "";
+  });
+
+  // 入力フィールドも空にしておく
+  document.pokemon_kill.char.value = "";
+}
+
+// ポケモンをハイライトする関数
 function highlight() {
 
   // 入力した文字を取得
@@ -33,4 +51,19 @@ function highlight() {
       target_char[j].style.backgroundColor = "yellow";
     }
   }
+
+  // フォームをクリアしておく
+  document.pokemon_highlight.char.value = "";
+}
+
+// ハイライトのリセット
+function highlight_reset() {
+  const items = document.querySelectorAll('#target_pokemon li');
+  items.forEach(item => {
+    // 背景色を消す
+    item.style.backgroundColor = "";
+  });
+
+  // 入力フィールドも空にしておく
+  document.pokemon_highlight.char.value = "";
 }

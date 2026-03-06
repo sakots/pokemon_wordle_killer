@@ -21,6 +21,7 @@
                 <legend>絞る</legend>
                 <input type="text" name="char">
                 <button type="submit" onclick="kill()">搾る</button>
+                <button type="button" onclick="kill_reset()">リセット</button>
             </fieldset>
         </form>
         <form name="pokemon_highlight" id="pokemon_highlight" action="" method="post" onsubmit="javascript: return false;">
@@ -28,6 +29,7 @@
                 <legend>ハイライト</legend>
                 <input type="text" name="char">
                 <button type="submit" onclick="highlight()">ハイライト</button>
+                <button type="button" onclick="highlight_reset()">リセット</button>
             </fieldset>
         </form>
         <ul id="target_pokemon">
