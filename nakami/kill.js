@@ -1,7 +1,7 @@
 function kill() {
 
   // 入力した文字を取得
-  const kill_class = document.pokemon.char.value;
+  const kill_class = document.pokemon_kill.char.value;
   console.log (kill_class);
   let kill_class_split = kill_class.split('');
   console.log (kill_class_split);
@@ -19,7 +19,7 @@ function kill() {
 function highlight() {
 
   // 入力した文字を取得
-  const highlight_class = document.pokemon.char2.value;
+  const highlight_class = document.pokemon_highlight.char.value;
   console.log (highlight_class);
   let highlight_class_split = highlight_class.split('');
   console.log (highlight_class_split);
