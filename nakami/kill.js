@@ -63,7 +63,8 @@ function highlight(form) {
       }
     }
     if (hasAll) {
-      item.style.backgroundColor = 'yellow';
+      item.dataset.highlight = "true";
+      renderHighlightState(item);
     }
   });
 
@@ -75,12 +76,78 @@ function highlight(form) {
 function highlightReset(form) {
   const items = document.querySelectorAll('#targetPokemon li');
   items.forEach(item => {
-    // 背景色を消す
-    item.style.backgroundColor = "";
+    delete item.dataset.highlight;
+    renderHighlightState(item);
   });
 
   // 入力フィールドも空にしておく
   if (form) {
     form.char.value = "";
+  }
+}
+
+// 文字位置が確定したポケモンを別色でハイライトする関数
+function Confirm(form) {
+  const conditions = [
+    form.char1.value,
+    form.char2.value,
+    form.char3.value,
+    form.char4.value,
+    form.char5.value,
+  ];
+
+  clearConfirmHighlight();
+
+  if (conditions.every(char => char === "")) {
+    return;
+  }
+
+  const items = document.querySelectorAll('#targetPokemon li');
+  items.forEach(item => {
+    const pokemonName = item.textContent.trim();
+    let isMatch = true;
+
+    for (let i = 0; i < conditions.length; i++) {
+      if (conditions[i] !== "" && pokemonName[i] !== conditions[i]) {
+        isMatch = false;
+        break;
+      }
+    }
+
+    if (isMatch) {
+      item.dataset.confirmHighlight = "true";
+      renderHighlightState(item);
+    }
+  });
+}
+
+// 文字確定ハイライトのリセット
+function confirmReset(form) {
+  clearConfirmHighlight();
+
+  if (form) {
+    form.char1.value = "";
+    form.char2.value = "";
+    form.char3.value = "";
+    form.char4.value = "";
+    form.char5.value = "";
+  }
+}
+
+function clearConfirmHighlight() {
+  const items = document.querySelectorAll('#targetPokemon li');
+  items.forEach(item => {
+    delete item.dataset.confirmHighlight;
+    renderHighlightState(item);
+  });
+}
+
+function renderHighlightState(item) {
+  if (item.dataset.confirmHighlight === "true") {
+    item.style.backgroundColor = "#009900";
+  } else if (item.dataset.highlight === "true") {
+    item.style.backgroundColor = "yellow";
+  } else {
+    item.style.backgroundColor = "";
   }
 }
