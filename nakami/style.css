@@ -1,6 +1,6 @@
 @charset "UTF-8";
 body {
-  background: #CCC;
+  background: linear-gradient(to right bottom, #e682a4, #cdcded, #8bc7cf);
   background-attachment: fixed;
   padding: 1em 2em;
 }
