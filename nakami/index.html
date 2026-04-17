@@ -26,23 +26,31 @@
       <h2>文字列を入力すると、その文字が含まれるポケモンが消えます。</h2>
       <h2>ハイライト機能もつけました。</h2>
       <p>ポケモン、搾れるね！</p>
-      <form name="pokemon_kill" id="pokemon_kill" action="" method="post" onsubmit="javascript: return false;">
+      <form name="pokemonKill" id="pokemonKill" action="" method="post" onsubmit="javascript: return false;">
         <fieldset>
           <legend>絞る</legend>
           <input type="text" name="char">
           <button type="submit" onclick="kill()">搾る</button>
-          <button type="button" onclick="kill_reset()">リセット</button>
+          <button type="button" onclick="killReset()">リセット</button>
         </fieldset>
       </form>
-      <form name="pokemon_highlight" id="pokemon_highlight" action="" method="post" onsubmit="javascript: return false;">
+      <form name="pokemonHighlight" id="pokemonHighlight" action="" method="post" onsubmit="javascript: return false;">
         <fieldset>
           <legend>ハイライト</legend>
           <input type="text" name="char">
-          <button type="submit" onclick="highlight()">ハイライト</button>
-          <button type="button" onclick="highlight_reset()">リセット</button>
+          <button type="submit" onclick="highlight(this.form)">ハイライト</button>
+          <button type="button" onclick="highlightReset(this.form)">リセット</button>
         </fieldset>
       </form>
-      <ul id="target_pokemon">
+      <form name="pokemonHighlight" id="pokemonHighlightConfirm" action="" method="post" onsubmit="javascript: return false;">
+        <fieldset>
+          <legend>ハイライト</legend>
+          <input type="text" name="char">
+          <button type="submit" onclick="highlight(this.form)">ハイライト</button>
+          <button type="button" onclick="highlightReset(this.form)">リセット</button>
+        </fieldset>
+      </form>
+      <ul id="targetPokemon">
         <li class="フ シ ギ ダ ネ">フシギダネ</li>
         <li class="フ シ ギ ソ ウ">フシギソウ</li>
         <li class="フ シ ギ バ ナ">フシギバナ</li>
@@ -332,7 +340,7 @@
     </main>
     <footer>
       <p>© 2024-2026 Pokemon Wordle Killer</p>
-      <p>v2.2.1 <a href="https://github.com/sakots/pokemon-wordle-killer">ソースコード</a></p>
+      <p>v2.3.0 <a href="https://github.com/sakots/pokemon-wordle-killer">ソースコード</a></p>
     </footer>
   </body>
 </html>
