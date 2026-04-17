@@ -44,10 +44,17 @@
       </form>
       <form name="pokemonHighlight" id="pokemonHighlightConfirm" action="" method="post" onsubmit="javascript: return false;">
         <fieldset>
-          <legend>ハイライト</legend>
-          <input type="text" name="char">
-          <button type="submit" onclick="highlight(this.form)">ハイライト</button>
-          <button type="button" onclick="highlightReset(this.form)">リセット</button>
+          <legend>文字確定</legend>
+          <input type="text" name="char1" maxlength="1">
+          <button type="submit" onclick="Confirm(this.form)">1文字目</button>
+          <input type="text" name="char2" maxlength="1">
+          <button type="submit" onclick="Confirm(this.form)">2文字目</button>
+          <input type="text" name="char3" maxlength="1">
+          <button type="submit" onclick="Confirm(this.form)">3文字目</button>
+          <input type="text" name="char4" maxlength="1">
+          <button type="submit" onclick="Confirm(this.form)">4文字目</button>
+          <input type="text" name="char5" maxlength="1">
+          <button type="submit" onclick="Confirm(this.form)">5文字目</button>
         </fieldset>
       </form>
       <ul id="targetPokemon">

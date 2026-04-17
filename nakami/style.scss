@@ -9,15 +9,18 @@ ul {
   flex-wrap: wrap;
   position: relative;
   color: #211;
-  gap: 1.5px;
+  gap: 3px;
   li {
     width: 7em;
     display: block;
-    outline: 1px solid #898;
     background: #BDB;
     padding: 0.1em;
     &::before {
       content: "・";
     }
   }
+}
+
+input[maxlength="1"] {
+  width: 1em;
 }
