@@ -116,6 +116,10 @@ function Confirm(form) {
 
     if (isMatch) {
       item.dataset.confirmHighlight = "true";
+      item.dataset.confirmPositions = conditions
+        .map((char, index) => char !== "" ? String(index) : "")
+        .filter(index => index !== "")
+        .join(",");
       renderHighlightState(item);
     }
   });
@@ -138,16 +142,45 @@ function clearConfirmHighlight() {
   const items = document.querySelectorAll('#targetPokemon li');
   items.forEach(item => {
     delete item.dataset.confirmHighlight;
+    delete item.dataset.confirmPositions;
     renderHighlightState(item);
   });
 }
 
 function renderHighlightState(item) {
-  if (item.dataset.confirmHighlight === "true") {
-    item.style.backgroundColor = "#009900";
-  } else if (item.dataset.highlight === "true") {
+  if (!item.dataset.pokemonName) {
+    item.dataset.pokemonName = item.textContent.trim();
+  }
+
+  const pokemonName = item.dataset.pokemonName;
+  const confirmPositions = item.dataset.confirmPositions
+    ? item.dataset.confirmPositions.split(",").map(Number)
+    : [];
+
+  if (confirmPositions.length > 0) {
+    item.innerHTML = Array.from(pokemonName).map((char, index) => {
+      if (confirmPositions.includes(index)) {
+        return `<span style="background-color: #009900;">${escapeHtml(char)}</span>`;
+      }
+
+      return escapeHtml(char);
+    }).join("");
+  } else {
+    item.textContent = pokemonName;
+  }
+
+  if (item.dataset.highlight === "true") {
     item.style.backgroundColor = "yellow";
   } else {
     item.style.backgroundColor = "";
   }
+}
+
+function escapeHtml(text) {
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
 }
