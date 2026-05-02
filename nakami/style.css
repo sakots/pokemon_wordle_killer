@@ -25,4 +25,8 @@ ul li::before {
 input[maxlength="1"] {
   width: 1em;
 }
+
+.confirm-char-highlight {
+  background-color: #009900 !important;
+}
 /*# sourceMappingURL=style.css.map */

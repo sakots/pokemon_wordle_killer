@@ -1,2 +1,2 @@
-body{background:linear-gradient(to right bottom, #e682a4, #cdcded, #8bc7cf);background-attachment:fixed;padding:1em 2em}ul{display:flex;flex-wrap:wrap;position:relative;color:#211;gap:3px}ul li{width:7em;display:block;background:#bdb;padding:.1em}ul li::before{content:"・"}input[maxlength="1"]{width:1em}
+body{background:linear-gradient(to right bottom, #e682a4, #cdcded, #8bc7cf);background-attachment:fixed;padding:1em 2em}ul{display:flex;flex-wrap:wrap;position:relative;color:#211;gap:3px}ul li{width:7em;display:block;background:#bdb;padding:.1em}ul li::before{content:"・"}input[maxlength="1"]{width:1em}.confirm-char-highlight{background-color:#090 !important}
 /*# sourceMappingURL=style.min.css.map */

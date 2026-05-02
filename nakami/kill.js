@@ -160,7 +160,7 @@ function renderHighlightState(item) {
   if (confirmPositions.length > 0) {
     item.innerHTML = Array.from(pokemonName).map((char, index) => {
       if (confirmPositions.includes(index)) {
-        return `<span style="background-color: #009900;">${escapeHtml(char)}</span>`;
+        return `<span class="confirm-char-highlight">${escapeHtml(char)}</span>`;
       }
 
       return escapeHtml(char);
